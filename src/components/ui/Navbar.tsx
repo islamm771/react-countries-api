@@ -12,9 +12,9 @@ const Navbar = () => {
         <nav className='bg-white shadow-md sticky top-0 z-50'>
             <div className="container flex items-center justify-between py-4">
                 <div>
-                    <h3 className='text-2xl font-bold'>Where in the world?</h3>
+                    <h3 className='text-lg md:text-2xl font-bold'>Where in the world?</h3>
                 </div>
-                <button className="dark-control flex items-center gap-1 py-4 px-8 rounded-md shadow-md bg-white" onClick={toggleDark}>
+                <button className="dark-control flex items-center gap-1 text-sm py-2 px-4 md:py-4 md:px-8 md:text-base rounded-md shadow-md bg-white" onClick={toggleDark}>
                     {isdark ? <BsFillSunFill /> : <IoMoon />}
                     {isdark ? "Light Mode" : "Dark Mode"}
                 </button>

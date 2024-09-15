@@ -10,7 +10,7 @@ const SearchBar = () => {
     }
 
     return (
-        <div className="search-con w-[400px] shadow-md rounded-lg py-2.5 pr-8 pl-4 relative">
+        <div className="search-con w-full md:w-[400px] shadow-md rounded-lg py-2.5 pr-8 pl-4 relative">
             <input
                 className='w-full block p-2.5 outline-none'
                 value={search}
