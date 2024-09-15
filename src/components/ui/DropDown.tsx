@@ -50,8 +50,10 @@ const DropDown = () => {
     }, []);
 
     return (
-        <div className="drop-down-con w-[250px] relative">
-            <div className="drop-down shadow-md rounded-lg py-4 px-6 flex items-center justify-between cursor-pointer" onClick={handleShow}>
+        <div className="drop-down-con w-[250px] relative" ref={dropRef}>
+            <div
+                className="drop-down shadow-md rounded-lg py-4 px-6 flex items-center justify-between cursor-pointer"
+                onClick={handleShow}>
                 <p>{region ? `${region}` : "Filter by region"}</p>
                 <span className="">
                     <BiChevronDown size={30} />
@@ -59,7 +61,6 @@ const DropDown = () => {
             </div>
             {isShow && (
                 <div
-                    ref={dropRef}
                     className="drop bg-white shadow-md rounded-lg absolute top-[68px] z-10 w-full overflow-hidden">
                     {renderFilterRegions}
                 </div>
