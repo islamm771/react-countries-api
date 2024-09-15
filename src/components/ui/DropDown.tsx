@@ -56,7 +56,7 @@ const DropDown = () => {
                 onClick={handleShow}>
                 <p>{region ? `${region}` : "Filter by region"}</p>
                 <span className="">
-                    <BiChevronDown size={30} />
+                    <BiChevronDown className={`transition-transform duration-[0.5s] ${isShow ? 'rotate-180' : 'rotate-0'}`} size={30} />
                 </span>
             </div>
             {isShow && (

@@ -12,6 +12,7 @@ const Country = () => {
     if (error) {
         return <div>error</div>
     }
+    console.log(data)
     if (data) {
         return (
             <div className='container my-12'>
@@ -59,13 +60,16 @@ const Country = () => {
                             </div>
 
                         </div>
-                        <div className='mt-12 flex gap-2 flex-wrap'>
-                            <b className='font-semibold flex-[0.25]'>Border Countries:</b>
-                            <ul className='flex gap-2 flex-wrap flex-[0.75]'>
-                                {data[0].borders.map((border) => (
-                                    <li className='shadow-md rounded-md px-6 py-2 text-sm' key={border}>{border}</li>
-                                ))}
-                            </ul>
+                        <div className='mt-12'>
+                            <span><b className='font-semibold 2xl:mr-4'>Border Countries:</b></span>
+                            {data[0].borders ? (
+                                <ul className='inline-flex gap-2 flex-wrap mt-4 2xl:mt-0'>
+                                    {data[0]?.borders?.map((border) => (
+                                        <li className='shadow-md rounded-md px-6 py-2 text-sm' key={border}>{border}</li>
+                                    ))}
+                                </ul>) :
+                                <p>No border countries available.</p>
+                            }
                         </div>
                     </div>
                 </div>
