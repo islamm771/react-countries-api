@@ -1,11 +1,15 @@
 import { FaSearch } from 'react-icons/fa';
-import { setSearch } from '../../app/feature/CountryFilterSlice';
+import { setRegion, setSearch } from '../../app/feature/CountryFilterSlice';
 import { useAppDispatch, useAppSelector } from '../../app/store';
 
 const SearchBar = () => {
     const dispatch = useAppDispatch();
     const { search } = useAppSelector((state) => state.countryFilter);
     const handleChange = (value: string) => {
+        if (!search) {
+            dispatch(setRegion(''))
+            console.log("sad")
+        }
         dispatch(setSearch(value))
     }
 
