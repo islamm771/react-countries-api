@@ -36,7 +36,7 @@ const Country = () => {
                                 <p><b className="font-semibold">Sub Region:</b> {data[0].subregion}</p>
                                 <p><b className="font-semibold">Capital:</b> {data[0].capital}</p>
                             </div>
-                            <div>
+                            <div className='space-y-2'>
                                 <p><b className="font-semibold">Top Level Domain:</b> {data[0].tld[0]}</p>
                                 <p>
                                     <b className="font-semibold">
@@ -60,10 +60,10 @@ const Country = () => {
                             </div>
 
                         </div>
-                        <div className='mt-12'>
-                            <span><b className='font-semibold 2xl:mr-4'>Border Countries:</b></span>
+                        <div className='mt-12 flex items-center gap-4 flex-wrap'>
+                            <p><b className='font-semibold'>Border Countries:</b></p>
                             {data[0].borders ? (
-                                <ul className='inline-flex gap-2 flex-wrap mt-4 2xl:mt-0'>
+                                <ul className='inline-flex gap-2 flex-wrap'>
                                     {data[0]?.borders?.map((border) => (
                                         <li className='shadow-md rounded-md px-6 py-2 text-sm' key={border}>{border}</li>
                                     ))}
