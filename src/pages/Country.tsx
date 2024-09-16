@@ -15,30 +15,30 @@ const Country = () => {
     console.log(data)
     if (data) {
         return (
-            <div className='container my-12'>
+            <div className='country-details container my-12'>
                 <div>
-                    <button className='shadow-md rounded-lg pl-6 pr-8 py-2.5 flex items-center gap-1'
+                    <button className='back-btn shadow-md rounded-lg pl-6 pr-8 py-2.5 flex items-center gap-1 font-light'
                         onClick={() => navigate(-1)}>
                         <IoIosArrowRoundBack size={25} /> Back
                     </button>
                 </div>
                 <div className="grid lg:grid-cols-2 gap-24 mt-12">
                     <div>
-                        <img className='mx-auto md:w-[500px] lg:w-[800px]' src={data[0].flags.png} alt="" />
+                        <img className='mx-auto w-full md:w-[500px] lg:w-[800px]' src={data[0].flags.png} alt="" />
                     </div>
                     <div className='xl:pt-8'>
                         <h3 className='text-2xl font-bold'>{data[0].name.common}</h3>
                         <div className='grid gap-8 md:grid-cols-2 md:gap-24 mt-6'>
                             <div className='space-y-2'>
-                                <p><b className="font-semibold">Native Name: </b> {data[0].altSpellings[1]} </p>
-                                <p><b className="font-semibold">Population:</b> {data[0].population}</p>
-                                <p><b className="font-semibold">Region:</b> {data[0].region}</p>
-                                <p><b className="font-semibold">Sub Region:</b> {data[0].subregion}</p>
-                                <p><b className="font-semibold">Capital:</b> {data[0].capital}</p>
+                                <p className="font-light"><b className="font-semibold">Native Name: </b> {data[0].altSpellings[1]} </p>
+                                <p className="font-light"><b className="font-semibold">Population:</b> {data[0].population}</p>
+                                <p className="font-light"><b className="font-semibold">Region:</b> {data[0].region}</p>
+                                <p className="font-light"><b className="font-semibold">Sub Region:</b> {data[0].subregion}</p>
+                                <p className="font-light"><b className="font-semibold">Capital:</b> {data[0].capital}</p>
                             </div>
                             <div className='space-y-2'>
-                                <p><b className="font-semibold">Top Level Domain:</b> {data[0].tld[0]}</p>
-                                <p>
+                                <p className="font-light"><b className="font-semibold">Top Level Domain:</b> {data[0].tld[0]}</p>
+                                <p className="font-light">
                                     <b className="font-semibold">
                                         Currencies:{" "}
                                     </b>
@@ -49,7 +49,7 @@ const Country = () => {
                                         </span>
                                     ))}
                                 </p>
-                                <p>
+                                <p className="font-light">
                                     <b className="font-semibold">
                                         Languages:{" "}
                                     </b>
@@ -65,7 +65,7 @@ const Country = () => {
                             {data[0].borders ? (
                                 <ul className='inline-flex gap-2 flex-wrap'>
                                     {data[0]?.borders?.map((border) => (
-                                        <li className='shadow-md rounded-md px-6 py-2 text-sm' key={border}>{border}</li>
+                                        <li className='border-country shadow-md rounded-md px-6 py-2 text-sm' key={border}>{border}</li>
                                     ))}
                                 </ul>) :
                                 <p>No border countries available.</p>

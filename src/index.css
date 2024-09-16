@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: hsl(0, 0%, 98%);
+    transition: 0.3s;
+}
+
+body.dark {
+    background-color: hsl(207, 26%, 17%);
+}
+
+/* start dark mood */
+body.dark nav,
+body.dark nav .dark-control,
+body.dark .container .country,
+body.dark .filters .search-con,
+body.dark .filters .drop-down,
+body.dark .filters .drop,
+body.dark .country-details .back {
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+    box-shadow: 0 3px 7px 0 #0000002c;
+}
+
+body.dark .filters .search-con span svg,
+body.dark .filters .drop-down-con span svg,
+body.dark nav>div h3,
+body.dark .not-found {
+    color: white !important;
+}
+
+body.dark .filters .search-con input,
+body.dark .filters .search-con input::placeholder {
+    color: white;
+}
+
+body.dark .filters .drop p.active,
+body.dark .filters .drop p:hover:not(.active) {
+    background-color: #08111aad !important;
+}
+
+body.dark .country-details {
+    color: white;
+}
+
+body.dark .country-details .back-btn,
+body.dark .country-details .border-country {
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+    box-shadow: 0 3px 7px 0 #0000002c;
+}
+
+body.dark .country-details img {
+    box-shadow: 0 3px 7px 0 #0000002c;
+}
+
+
+/* end dark mood */

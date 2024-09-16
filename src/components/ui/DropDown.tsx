@@ -28,7 +28,7 @@ const DropDown = () => {
 
     const renderFilterRegions = filterRegions.map((rg: string, idx: number) => (
         <p
-            className={`cursor-pointer p-2.5 transition-all duration-[0.5s] hover:pl-4 ${region === rg ? "bg-[#eee]" : ""}`}
+            className={`cursor-pointer p-2.5 transition-all duration-[0.5s] hover:pl-4 ${region === rg ? "bg-[#eee] active" : ""}`}
             onClick={() => handleSelectRegion(rg)}
             key={idx}
         >
