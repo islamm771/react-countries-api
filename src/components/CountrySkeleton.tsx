@@ -1,6 +1,5 @@
 const CountrySkeleton = () => {
     return (
-
         <div role="status" className="border shadow-md rounded-lg animate-pulse">
             <div className="flex items-center justify-center h-48 bg-gray-300 rounded-t-lg">
                 <svg className="w-10 h-10 text-gray-200 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
